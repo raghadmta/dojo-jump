@@ -3,7 +3,7 @@ pipeline{
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('chandra-dockerhub')
+		DOCKERHUB_CREDENTIALS=credentials('Docker-cred-hub')
 	}
 
 	stages {
@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t chandradeoarya/dojo-jump:latest .'
+				sh 'docker build -t goraghad/2048:latest .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push chandradeoarya/dojo-jump:latest'
+				sh 'docker push goraghad/2048:latest'
 			}
 		}
 	}
