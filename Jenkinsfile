@@ -11,8 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh ' docker --version ' 
-				sh 'docker build -t goraghad/2048:latest .'
+				sh 'docker build -t goraghad/dojo-jump:latest .'
 			}
 		}
 
@@ -26,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push goraghad/2048:latest'
+				sh 'docker push goraghad/dojo-jump:latest'
 			}
 		}
 	}
