@@ -11,6 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
+				sh ' docker --version ' 
 				sh 'docker build -t goraghad/2048:latest .'
 			}
 		}
